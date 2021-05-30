@@ -1196,6 +1196,27 @@
     "@nguniversal/common" "12.0.1"
     tslib "^2.1.0"
 
+"@ngxs-labs/emitter@^2.0.0":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@ngxs-labs/emitter/-/emitter-2.0.0.tgz#83413b17b87154856dfcd83895d6d26cf4698bb2"
+  integrity sha512-CecS9FPVf9oubzkJC/Zgn3+6XUOY8vimrMjL4ICd3CdR75NpOMmTytMEtDYXjvDptNy8ni+Eywzk3qGg4j+p0w==
+  dependencies:
+    tslib "^1.9.0"
+
+"@ngxs-labs/select-snapshot@^3.0.0":
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/@ngxs-labs/select-snapshot/-/select-snapshot-3.0.0.tgz#bfab5564231c6d1e4c9291cb4dbf032665938403"
+  integrity sha512-43lTllV1Y/iFMSuorEJUpYNjIJfzDHRztnbcQV+9Tg28OXySnXetR4PzUwLX1B+pnEmaPG7XUpH8pNNjufqZIg==
+  dependencies:
+    tslib "^2.0.0"
+
+"@ngxs/logger-plugin@^3.7.2":
+  version "3.7.2"
+  resolved "https://registry.yarnpkg.com/@ngxs/logger-plugin/-/logger-plugin-3.7.2.tgz#32dc7b0c1feddc41dab159f015bc73381cc249c6"
+  integrity sha512-JGqgBUX+r/1uV0IkHMJtGyAFDrbjbUZWgmmlXCaJ4t1r+cY/TPJm5BeLtiIqdewf2ELfzOfA682mbk3EOlRymw==
+  dependencies:
+    tslib "^1.9.0"
+
 "@ngxs/store@^3.7.2":
   version "3.7.2"
   resolved "https://registry.yarnpkg.com/@ngxs/store/-/store-3.7.2.tgz#1088b0669adc382d36ca7ae8438c603e55879b42"
