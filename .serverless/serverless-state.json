@@ -176,7 +176,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/ssrserverless-angular/production/1622350988650-2021-05-30T05:03:08.650Z/ssrserverless-angular.zip"
+                "S3Key": "serverless/ssrserverless-angular/production/1622386587738-2021-05-30T14:56:27.738Z/ssrserverless-angular.zip"
               },
               "Handler": "lambda.ssrserverless",
               "Runtime": "nodejs10.x",
@@ -194,14 +194,14 @@
               "ApiLogGroup"
             ]
           },
-          "ApiLambdaVersionQMP7I2tm377bqJdMHua1CVzrZaN8r5JpKKXD4s0CDg": {
+          "ApiLambdaVersionsS3JEnVz11AO1cYkOGNSwvPJ7uoE0ATDXFh57OxDvI": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "ApiLambdaFunction"
               },
-              "CodeSha256": "rWO62g+X+Tr1KsM3mtb49LkbrO9k3FueN9kx0Iff35Q="
+              "CodeSha256": "kt5yXsQ3eP9EtFBG/p2EiSbjUdbwuufhwD57eWC9UE4="
             }
           },
           "ApiGatewayRestApi": {
@@ -320,7 +320,7 @@
               "MethodResponses": []
             }
           },
-          "ApiGatewayDeployment1622350976274": {
+          "ApiGatewayDeployment1622386580662": {
             "Type": "AWS::ApiGateway::Deployment",
             "Properties": {
               "RestApiId": {
@@ -383,7 +383,7 @@
           "ApiLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "ApiLambdaVersionQMP7I2tm377bqJdMHua1CVzrZaN8r5JpKKXD4s0CDg"
+              "Ref": "ApiLambdaVersionsS3JEnVz11AO1cYkOGNSwvPJ7uoE0ATDXFh57OxDvI"
             },
             "Export": {
               "Name": "sls-ssrserverless-angular-production-ApiLambdaFunctionQualifiedArn"
@@ -529,7 +529,7 @@
         "timeout": 60,
         "runtime": "nodejs10.x",
         "vpc": {},
-        "versionLogicalId": "ApiLambdaVersionQMP7I2tm377bqJdMHua1CVzrZaN8r5JpKKXD4s0CDg"
+        "versionLogicalId": "ApiLambdaVersionsS3JEnVz11AO1cYkOGNSwvPJ7uoE0ATDXFh57OxDvI"
       }
     },
     "configValidationMode": "warn",
@@ -560,8 +560,8 @@
           "!node_modules/mime-types/**",
           "!node_modules/mime-db/**"
         ],
-        "artifact": "/Users/takapi327/Development/angular-app/sample-angular-university/.serverless/ssrserverless-angular.zip",
-        "artifactDirectoryName": "serverless/ssrserverless-angular/production/1622350988650-2021-05-30T05:03:08.650Z"
+        "artifact": "/Users/takapi327/development/sample-angular-university/.serverless/ssrserverless-angular.zip",
+        "artifactDirectoryName": "serverless/ssrserverless-angular/production/1622386587738-2021-05-30T14:56:27.738Z"
       },
       "custom": {
         "$ref": "$[\"service\"][\"custom\"]"
@@ -571,10 +571,10 @@
       }
     },
     "isDashboardMonitoringPreconfigured": false,
-    "artifact": "/Users/takapi327/Development/angular-app/sample-angular-university/.serverless/ssrserverless-angular.zip"
+    "artifact": "/Users/takapi327/development/sample-angular-university/.serverless/ssrserverless-angular.zip"
   },
   "package": {
-    "artifactDirectoryName": "serverless/ssrserverless-angular/production/1622350988650-2021-05-30T05:03:08.650Z",
+    "artifactDirectoryName": "serverless/ssrserverless-angular/production/1622386587738-2021-05-30T14:56:27.738Z",
     "artifact": "ssrserverless-angular.zip"
   }
 }
