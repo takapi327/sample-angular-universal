@@ -7,7 +7,7 @@ provider:
   name: aws
   runtime: nodejs10.x
   memorySize: 128
-  timeout: 30
+  timeout: 60
   stage: production
   region: ap-northeast-1
 

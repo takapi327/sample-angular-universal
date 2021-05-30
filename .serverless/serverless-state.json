@@ -8,7 +8,7 @@
       "name": "aws",
       "runtime": "nodejs10.x",
       "memorySize": 128,
-      "timeout": 30,
+      "timeout": 60,
       "stage": "production",
       "region": "ap-northeast-1",
       "variableSyntax": "\\${([^{}:]+?(?:\\(|:)(?:[^:{}][^{}]*?)?)}",
@@ -176,13 +176,13 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/ssrserverless-angular/production/1622286549586-2021-05-29T11:09:09.586Z/ssrserverless-angular.zip"
+                "S3Key": "serverless/ssrserverless-angular/production/1622350988650-2021-05-30T05:03:08.650Z/ssrserverless-angular.zip"
               },
               "Handler": "lambda.ssrserverless",
               "Runtime": "nodejs10.x",
               "FunctionName": "ssrserverless-angular-production-api",
               "MemorySize": 128,
-              "Timeout": 30,
+              "Timeout": 60,
               "Role": {
                 "Fn::GetAtt": [
                   "IamRoleLambdaExecution",
@@ -194,14 +194,14 @@
               "ApiLogGroup"
             ]
           },
-          "ApiLambdaVersionCOoNDJ5GF1RHDDjVbZRhuPBVBhqiwgBs6dFrb3va1k": {
+          "ApiLambdaVersionQMP7I2tm377bqJdMHua1CVzrZaN8r5JpKKXD4s0CDg": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "ApiLambdaFunction"
               },
-              "CodeSha256": "CUa4J85oeBSDsiIDmAhRG8mD6aG0j3q37O1q1dkM3ik="
+              "CodeSha256": "rWO62g+X+Tr1KsM3mtb49LkbrO9k3FueN9kx0Iff35Q="
             }
           },
           "ApiGatewayRestApi": {
@@ -320,7 +320,7 @@
               "MethodResponses": []
             }
           },
-          "ApiGatewayDeployment1622286541937": {
+          "ApiGatewayDeployment1622350976274": {
             "Type": "AWS::ApiGateway::Deployment",
             "Properties": {
               "RestApiId": {
@@ -383,7 +383,7 @@
           "ApiLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "ApiLambdaVersionCOoNDJ5GF1RHDDjVbZRhuPBVBhqiwgBs6dFrb3va1k"
+              "Ref": "ApiLambdaVersionQMP7I2tm377bqJdMHua1CVzrZaN8r5JpKKXD4s0CDg"
             },
             "Export": {
               "Name": "sls-ssrserverless-angular-production-ApiLambdaFunctionQualifiedArn"
@@ -526,10 +526,10 @@
         "name": "ssrserverless-angular-production-api",
         "package": {},
         "memory": 128,
-        "timeout": 30,
+        "timeout": 60,
         "runtime": "nodejs10.x",
         "vpc": {},
-        "versionLogicalId": "ApiLambdaVersionCOoNDJ5GF1RHDDjVbZRhuPBVBhqiwgBs6dFrb3va1k"
+        "versionLogicalId": "ApiLambdaVersionQMP7I2tm377bqJdMHua1CVzrZaN8r5JpKKXD4s0CDg"
       }
     },
     "configValidationMode": "warn",
@@ -551,6 +551,7 @@
           "node_modules/**",
           "e2e/**",
           "coverage/**",
+          "!dist/**",
           "!node_modules/@vendia/**",
           "!node_modules/aws-serverless-express/**",
           "!node_modules/binary-case/**",
@@ -559,8 +560,8 @@
           "!node_modules/mime-types/**",
           "!node_modules/mime-db/**"
         ],
-        "artifact": "/Users/takapi327/development/sample-angular-university/.serverless/ssrserverless-angular.zip",
-        "artifactDirectoryName": "serverless/ssrserverless-angular/production/1622286549586-2021-05-29T11:09:09.586Z"
+        "artifact": "/Users/takapi327/Development/angular-app/sample-angular-university/.serverless/ssrserverless-angular.zip",
+        "artifactDirectoryName": "serverless/ssrserverless-angular/production/1622350988650-2021-05-30T05:03:08.650Z"
       },
       "custom": {
         "$ref": "$[\"service\"][\"custom\"]"
@@ -570,10 +571,10 @@
       }
     },
     "isDashboardMonitoringPreconfigured": false,
-    "artifact": "/Users/takapi327/development/sample-angular-university/.serverless/ssrserverless-angular.zip"
+    "artifact": "/Users/takapi327/Development/angular-app/sample-angular-university/.serverless/ssrserverless-angular.zip"
   },
   "package": {
-    "artifactDirectoryName": "serverless/ssrserverless-angular/production/1622286549586-2021-05-29T11:09:09.586Z",
+    "artifactDirectoryName": "serverless/ssrserverless-angular/production/1622350988650-2021-05-30T05:03:08.650Z",
     "artifact": "ssrserverless-angular.zip"
   }
 }
