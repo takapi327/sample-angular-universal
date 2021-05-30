@@ -18,6 +18,7 @@ package:
     - e2e/**
     - coverage/**
     ##- '!src/assets/**'
+    - '!dist/**'
     - '!node_modules/@vendia/**'
     - '!node_modules/aws-serverless-express/**'
     - '!node_modules/binary-case/**'
