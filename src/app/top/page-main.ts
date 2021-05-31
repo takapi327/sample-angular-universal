@@ -4,4 +4,10 @@ import { Component } from '@angular/core'
   templateUrl:   './page-main.html',
   styleUrls:   [ './page-main.scss' ]
 })
-export class PageMainComponent {}
+export class PageMainComponent {
+  constructor() {}
+
+  ngOnInit() {
+    console.log(window.location.href)
+  }
+}
