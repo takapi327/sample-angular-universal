@@ -5,9 +5,11 @@ import { BrowserModule } from '@angular/platform-browser'
 import { APP_ROUTES } from './app.routes'
 
 import * as top from './top'
+import { StateModule } from 'src/lib/state'
 
 const MODULES = [
   top.ViewsModule,
+  StateModule,
   RouterModule.forChild(APP_ROUTES),
   BrowserModule.withServerTransition({ appId: 'serverApp' }),
 ]
