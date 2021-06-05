@@ -10,6 +10,7 @@
     "dev:ssr": "ng run sample-angular-university:serve-ssr",
     "serve:ssr": "node dist/sample-angular-university/server/main.js",
     "build:ssr": "ng build && ng run sample-angular-university:server",
+    "build.prod:ssr": "ng build --aot && ng run sample-angular-university:server:production",
     "prerender": "ng run sample-angular-university:prerender"
   },
   "private": true,
