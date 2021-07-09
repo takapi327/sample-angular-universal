@@ -1,5 +1,5 @@
 {
-  "name": "sample-angular-university",
+  "name": "sample-angular-universal",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -7,11 +7,11 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "dev:ssr": "ng run sample-angular-university:serve-ssr",
-    "serve:ssr": "node dist/sample-angular-university/server/main.js",
-    "build:ssr": "ng build && ng run sample-angular-university:server",
-    "build.prod:ssr": "ng build --aot && ng run sample-angular-university:server:production",
-    "prerender": "ng run sample-angular-university:prerender"
+    "dev:ssr": "ng run sample-angular-universal:serve-ssr",
+    "serve:ssr": "node dist/server/main.js",
+    "build:ssr": "ng build && ng run sample-angular-universal:server",
+    "build.prod:ssr": "ng build --aot && ng run sample-angular-universal:server:production",
+    "prerender": "ng run sample-angular-universal:prerender"
   },
   "private": true,
   "dependencies": {

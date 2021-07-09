@@ -6,7 +6,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "sample-angular-university": {
+    "sample-angular-universal": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -23,7 +23,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/sample-angular-university/browser",
+            "outputPath": "dist/browser",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -75,10 +75,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "sample-angular-university:build:production"
+              "browserTarget": "sample-angular-universal:build:production"
             },
             "development": {
-              "browserTarget": "sample-angular-university:build:development"
+              "browserTarget": "sample-angular-universal:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -86,7 +86,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "sample-angular-university:build"
+            "browserTarget": "sample-angular-universal:build"
           }
         },
         "test": {
@@ -110,7 +110,7 @@
         "server": {
           "builder": "@angular-devkit/build-angular:server",
           "options": {
-            "outputPath": "dist/sample-angular-university/server",
+            "outputPath": "dist/server",
             "main": "server.ts",
             "tsConfig": "tsconfig.server.json",
             "inlineStyleLanguage": "scss"
@@ -137,12 +137,12 @@
           "builder": "@nguniversal/builders:ssr-dev-server",
           "configurations": {
             "development": {
-              "browserTarget": "sample-angular-university:build:development",
-              "serverTarget": "sample-angular-university:server:development"
+              "browserTarget": "sample-angular-universal:build:development",
+              "serverTarget": "sample-angular-universal:server:development"
             },
             "production": {
-              "browserTarget": "sample-angular-university:build:production",
-              "serverTarget": "sample-angular-university:server:production"
+              "browserTarget": "sample-angular-universal:build:production",
+              "serverTarget": "sample-angular-universal:server:production"
             }
           },
           "defaultConfiguration": "development"
@@ -156,10 +156,10 @@
           },
           "configurations": {
             "production": {
-              "browserTarget": "sample-angular-university:build:production"
+              "browserTarget": "sample-angular-universal:build:production"
             },
             "development": {
-              "browserTarget": "sample-angular-university:build:development"
+              "browserTarget": "sample-angular-universal:build:development"
             }
           },
           "defaultConfiguration": "production"
@@ -167,5 +167,5 @@
       }
     }
   },
-  "defaultProject": "sample-angular-university"
+  "defaultProject": "sample-angular-universal"
 }

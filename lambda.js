@@ -1,5 +1,5 @@
 const awsServerlessExpress           = require('aws-serverless-express');
-const server                         = require('./dist/sample-angular-university/server/main');
+const server                         = require('./dist/server/main');
 const awsServerlessExpressMiddleware = require('aws-serverless-express/middleware');
 
 const app = server.app();
