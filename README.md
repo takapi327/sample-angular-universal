@@ -1,4 +1,4 @@
-# SampleAngularUniversity
+# SampleAngularUniversal
 
 ## Build ssr
 
