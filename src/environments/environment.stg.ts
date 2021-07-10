@@ -1,5 +1,5 @@
 export const environment = {
-  production: true,
-  stg:        false,
+  production: false,
+  stg:        true,
   apiPath:    'ECS Internal DNS'
 };
