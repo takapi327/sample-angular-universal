@@ -6,6 +6,9 @@ import * as express from 'express'
 import { join }                       from 'path'
 import { existsSync, readFileSync }   from 'fs'
 import { createWindow }               from 'domino'
+import { createProxyMiddleware }      from 'http-proxy-middleware'
+
+import { environment } from 'src/environments/environment'
 
 const distFolder = join(process.cwd(), 'dist/browser');
 const template   = readFileSync(join(distFolder, 'index.html')).toString()
@@ -23,6 +26,10 @@ export function app(): express.Express {
   const server     = express();
   const distFolder = join(process.cwd(), 'dist/browser');
   const indexHtml  = existsSync(join(distFolder, 'index.original.html')) ? 'index.original.html' : 'index';
+
+  /** use reverse proxy */
+  const apiProxy = createProxyMiddleware('/api', { target: environment.apiPath, secure: false, logLevel: 'info' })
+  server.use('/api', apiProxy)
 
   // Our Universal express-engine (found @ https://github.com/angular/universal/tree/master/modules/express-engine)
   server.engine('html', ngExpressEngine({
