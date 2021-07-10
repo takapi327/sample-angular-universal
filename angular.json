@@ -43,13 +43,13 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kb",
-                  "maximumError": "1mb"
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "2kb",
-                  "maximumError": "4kb"
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
                 }
               ],
               "fileReplacements": [
@@ -58,9 +58,43 @@
                   "with": "src/environments/environment.prod.ts"
                 }
               ],
+              "buildOptimizer": true,
+              "optimization": true,
+              "vendorChunk": false,
+              "extractLicenses": true,
+              "sourceMap": false,
+              "namedChunks": false,
+              "outputHashing": "all"
+            },
+            "stg": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ],
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.stg.ts"
+                }
+              ],
+              "buildOptimizer": true,
+              "optimization": true,
+              "vendorChunk": false,
+              "extractLicenses": true,
+              "sourceMap": false,
+              "namedChunks": false,
               "outputHashing": "all"
             },
             "development": {
+              "outputHashing": "none",
               "buildOptimizer": false,
               "optimization": false,
               "vendorChunk": true,
@@ -76,6 +110,9 @@
           "configurations": {
             "production": {
               "browserTarget": "sample-angular-universal:build:production"
+            },
+            "stg": {
+              "browserTarget": "sample-angular-universal:build:stg"
             },
             "development": {
               "browserTarget": "sample-angular-universal:build:development"
@@ -125,6 +162,15 @@
                 }
               ]
             },
+            "stg": {
+              "outputHashing": "media",
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.stg.ts"
+                }
+              ]
+            },
             "development": {
               "optimization": false,
               "sourceMap": true,
@@ -139,6 +185,10 @@
             "development": {
               "browserTarget": "sample-angular-universal:build:development",
               "serverTarget": "sample-angular-universal:server:development"
+            },
+            "stg": {
+              "browserTarget": "sample-angular-universal:build:stg",
+              "serverTarget": "sample-angular-universal:server:stg"
             },
             "production": {
               "browserTarget": "sample-angular-universal:build:production",
@@ -157,6 +207,9 @@
           "configurations": {
             "production": {
               "browserTarget": "sample-angular-universal:build:production"
+            },
+            "stg": {
+              "browserTarget": "sample-angular-universal:build:stg"
             },
             "development": {
               "browserTarget": "sample-angular-universal:build:development"
