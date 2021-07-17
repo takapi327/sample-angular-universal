@@ -10,7 +10,7 @@ import { createProxyMiddleware }      from 'http-proxy-middleware'
 
 import { environment } from 'src/environments/environment'
 
-const distFolder = join(process.cwd(), 'dist/browser');
+const distFolder = join(process.cwd(), 'dist/browser')
 const template   = readFileSync(join(distFolder, 'index.html')).toString()
 const win        = createWindow(template)
 
@@ -23,35 +23,35 @@ import { APP_BASE_HREF } from '@angular/common'
 
 // The Express app is exported so that it can be used by serverless Functions.
 export function app(): express.Express {
-  const server     = express();
-  const distFolder = join(process.cwd(), 'dist/browser');
-  const indexHtml  = existsSync(join(distFolder, 'index.original.html')) ? 'index.original.html' : 'index';
+  const server     = express()
+  const distFolder = join(process.cwd(), 'dist/browser')
+  const indexHtml  = existsSync(join(distFolder, 'index.original.html')) ? 'index.original.html' : 'index'
 
   /** use reverse proxy */
-  const apiProxy = createProxyMiddleware('/api', { target: environment.apiPath, secure: false, logLevel: 'info' })
+  const apiProxy = createProxyMiddleware('/api', { target: environment.apiPath, secure: false, logLevel: 'debug' })
   server.use('/api', apiProxy)
 
   // Our Universal express-engine (found @ https://github.com/angular/universal/tree/master/modules/express-engine)
   server.engine('html', ngExpressEngine({
     bootstrap: AppServerModule,
-  }));
+  }))
 
-  server.set('view engine', 'html');
-  server.set('views', distFolder);
+  server.set('view engine', 'html')
+  server.set('views', distFolder)
 
   // Example Express Rest API endpoints
   // server.get('/api/**', (req, res) => { });
   // Serve static files from /browser
   server.get('*.*', express.static(distFolder, {
     maxAge: '1y'
-  }));
+  }))
 
   // All regular routes use the Universal engine
   server.get('*', (req, res) => {
-    res.render(indexHtml, { req, providers: [{ provide: APP_BASE_HREF, useValue: req.baseUrl }] });
-  });
+    res.render(indexHtml, { req, providers: [{ provide: APP_BASE_HREF, useValue: req.baseUrl }] })
+  })
 
-  return server;
+  return server
 }
 
 function run(): void {
@@ -59,11 +59,11 @@ function run(): void {
   const HOST = '0.0.0.0'
 
   // Start up the Node server
-  const server = app();
+  const server = app()
   server.listen(PORT, HOST, () => {
-    console.log(`Node Express server listening on http://${HOST}:${PORT}`);
-  });
+    console.log(`Node Express server listening on http://${HOST}:${PORT}`)
+  })
 }
-run();
+run()
 
-export * from './src/main.server';
+export * from './src/main.server'
