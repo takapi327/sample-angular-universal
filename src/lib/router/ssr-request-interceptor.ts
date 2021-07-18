@@ -21,6 +21,9 @@ export class SSRRequestInterceptor implements HttpInterceptor{
       if (!req.url.startsWith('/')) {
         newUrl += '/'
       }
+      if (req.url.split('/')[0] === 'assets') {
+        newUrl = `${this.request.protocol}://${this.request.get('host')}/`
+      }
       newUrl += req.url
       serverReq = req.clone({ url: newUrl })
     }
