@@ -6,8 +6,4 @@ import { Component } from '@angular/core'
 })
 export class PageMainComponent {
   constructor() {}
-
-  ngOnInit() {
-    console.log(window.location.href)
-  }
 }
