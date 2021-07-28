@@ -5,11 +5,14 @@ import { BrowserModule } from '@angular/platform-browser'
 
 import { APP_ROUTES } from './app.routes'
 
-import * as top from './top'
+import * as top           from './top'
+import * as articleDetail from './article/detail'
+
 import { StateModule } from 'src/lib/state'
 
 const MODULES = [
   top.ViewsModule,
+  articleDetail.ViewsModule,
   CommonModule,
   StateModule,
   RouterModule.forChild(APP_ROUTES),
