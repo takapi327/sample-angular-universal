@@ -1,10 +1,10 @@
-import { NgModule, InjectionToken }       from '@angular/core'
-import { APP_BASE_HREF }                  from '@angular/common'
-import { HttpClient, HttpClientModule }   from '@angular/common/http'
-import { RouterModule }                   from '@angular/router'
-import { BrowserModule }                  from '@angular/platform-browser'
-import { BrowserAnimationsModule }        from '@angular/platform-browser/animations'
-import { MAT_FORM_FIELD_DEFAULT_OPTIONS } from '@angular/material/form-field'
+import { NgModule, InjectionToken }                       from '@angular/core'
+import { APP_BASE_HREF }                                  from '@angular/common'
+import { HttpClient, HttpClientModule }                   from '@angular/common/http'
+import { RouterModule }                                   from '@angular/router'
+import { BrowserModule, BrowserTransferStateModule }      from '@angular/platform-browser'
+import { BrowserAnimationsModule }                        from '@angular/platform-browser/animations'
+import { MAT_FORM_FIELD_DEFAULT_OPTIONS }                 from '@angular/material/form-field'
 import { DateAdapter, MAT_DATE_FORMATS, MAT_DATE_LOCALE } from '@angular/material/core'
 import { MAT_MOMENT_DATE_FORMATS, MomentDateAdapter }     from '@angular/material-moment-adapter'
 
@@ -36,6 +36,7 @@ const MODULES = [
   RouterModule.forRoot([]),
   BrowserModule,
   BrowserAnimationsModule,
+  BrowserTransferStateModule,
   NgxsModule.forRoot([]),
   NgxsEmitPluginModule.forRoot(),
   NgxsSelectSnapshotModule.forRoot(),
