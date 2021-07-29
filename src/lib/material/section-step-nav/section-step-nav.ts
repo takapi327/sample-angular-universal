@@ -19,20 +19,6 @@ export class SectionStepNavComponent {
 
   constructor() {}
 
-  currentPosition() {
-    switch (this.step) {
-      case 1:
-        return '18%'
-        break
-      case 2:
-        return '44%'
-        break
-      case 3:
-        return '72%'
-        break
-    }
-  }
-
   get getAttrForLine() {
     return [...Array(this.stepMax - 1).keys()].map(pos => {
       const step = pos + 1
