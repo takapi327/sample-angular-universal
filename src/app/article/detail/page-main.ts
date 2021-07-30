@@ -1,5 +1,4 @@
-import { Component }      from '@angular/core'
-import { ActivatedRoute } from '@angular/router'
+import { Component } from '@angular/core'
 
 import { ViewSelectSnapshot } from '@ngxs-labs/select-snapshot'
 
@@ -11,13 +10,11 @@ import { SpecialArticleState } from 'src/lib/state/article/special-article'
 })
 export class PageMainComponent {
 
-  constructor(
-    private route: ActivatedRoute
-  ) {}
+  constructor() {}
 
   @ViewSelectSnapshot(SpecialArticleState) state: SpecialArticleState.Model
 
   ngOnInit(): void {
-    SpecialArticleState.actLoad.emit(this.route.snapshot.params.id)
+    SpecialArticleState.actLoad.emit()
   }
 }

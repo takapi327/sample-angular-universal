@@ -6,6 +6,6 @@ import * as articleDetail from './article/detail'
 
 export const APP_ROUTES: Routes = [
   { path: '', component: top.PageMainComponent },
-  { path: 'article/:id', component: articleDetail.PageMainComponent },
+  { path: 'article', component: articleDetail.PageMainComponent },
   { path: '**', redirectTo: '', pathMatch: 'full' }
 ]
