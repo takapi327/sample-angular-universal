@@ -1,4 +1,5 @@
 import { NgModule }      from '@angular/core'
+import { CommonModule }  from '@angular/common'
 import { RouterModule }  from '@angular/router'
 import { BrowserModule } from '@angular/platform-browser'
 
@@ -12,6 +13,7 @@ import { LibModule } from 'src/lib'
 const MODULES = [
   top.ViewsModule,
   articleDetail.ViewsModule,
+  CommonModule,
   LibModule,
   RouterModule.forChild(APP_ROUTES),
   BrowserModule.withServerTransition({ appId: 'serverApp' }),
