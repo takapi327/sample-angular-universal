@@ -1,4 +1,6 @@
-<h1>{{ state.data?.title }}</h1>
-<p>{{ state.data?.body }}</p>
-<div>{{ state.data?.plant?.name }}</div>
-<div>{{ state.data?.plant?.price }}</div>
+<ng-container *ngIf="state.data as article">
+  <h1>{{ article.title }}</h1>
+  <p>{{ article.body }}</p>
+  <div>{{ article.plant.name }}</div>
+  <div>{{ article.plant.price }}</div>
+</ng-container>

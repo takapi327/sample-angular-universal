@@ -19,25 +19,19 @@ import { AppComponent } from './app'
 import { AppModule }    from './app/app.module'
 import { environment }  from './environments/environment'
 
-//declare const $
-//declare const __webpack_require__
-
-//const deployUrl = __webpack_require__.p
-
 const DEPLOY_URL = new InjectionToken<number>('DEPLOY_URL')
 
 export function HttpLoaderFactory(http: HttpClient) {
-  //return new TranslateHttpLoader(http, deployUrl + 'assets/i18n/' )
   return new TranslateHttpLoader(http, 'assets/i18n/' )
 }
 
 const MODULES = [
   HttpClientModule,
   RouterModule.forRoot([]),
-  BrowserModule,
+  BrowserModule.withServerTransition({ appId: 'serverApp' }),
   BrowserAnimationsModule,
   BrowserTransferStateModule,
-  NgxsModule.forRoot([]),
+  NgxsModule.forRoot([], { developmentMode: !environment.production }),
   NgxsEmitPluginModule.forRoot(),
   NgxsSelectSnapshotModule.forRoot(),
   environment.production ? [] : [ NgxsLoggerPluginModule.forRoot() ],

@@ -9,4 +9,4 @@ const COMPONENTS = [
   exports:      COMPONENTS,
   declarations: COMPONENTS
 })
-export class ViewsModule {}
+export class TopViewsModule {}

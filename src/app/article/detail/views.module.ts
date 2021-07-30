@@ -1,9 +1,9 @@
-import { NgModule }     from '@angular/core'
-import { CommonModule } from '@angular/common'
+import { NgModule }  from '@angular/core'
+import { LibModule } from 'src/lib'
 import * as views from './views'
 
 const MODULES = [
-  CommonModule
+  LibModule
 ]
 
 const COMPONENTS = [
@@ -15,4 +15,4 @@ const COMPONENTS = [
   exports:      COMPONENTS,
   declarations: COMPONENTS
 })
-export class ViewsModule {}
+export class ArticleDetailViewsModule {}
