@@ -1,5 +1,5 @@
 export const environment = {
   production: true,
   stg:        false,
-  apiPath:    'ECS Internal DNS'
+  apiPath:    'http://localhost:9000'
 };

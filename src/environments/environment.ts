@@ -5,7 +5,7 @@
 export const environment = {
   production: false,
   stg:        false,
-  apiPath:    'http//docker.for.mac.localhost:9000'
+  apiPath:    'http://localhost:9000'
 };
 
 /*
