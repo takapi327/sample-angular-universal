@@ -45,17 +45,13 @@ export class SpecialArticleState {
     SpecialArticleState.transferState = transferState
   }
 
-  @Emitter(SpecialArticleState.load) static actLoad: Emittable<number>
+  @Emitter(SpecialArticleState.load) static actLoad: Emittable<void>
 
   @Receiver()
   static load(
     ctx:    StateContext<SpecialArticleState.Model>,
-    action: EmitterAction<string>
+    action: EmitterAction<void>
   ) {
-    if (!action.payload) {
-      ctx.patchState({ data: null })
-      return of(null)
-    }
 
     const STATE_KEY = makeStateKey<string>('special-article-state-key')
 
