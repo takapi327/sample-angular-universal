@@ -9,7 +9,7 @@
     "test": "ng test",
     "dev:ssr": "ng run sample-angular-universal:serve-ssr",
     "serve:ssr": "node dist/server/main.js",
-    "build:ssr": "ng build && ng run sample-angular-universal:server",
+    "build:ssr": "ng build -c development && ng run sample-angular-universal:server",
     "build.stg:ssr": "ng build -c stg --aot=true --build-optimizer=true && ng run sample-angular-universal:server",
     "build.prod:ssr": "ng build --prod && ng run sample-angular-universal:server:production",
     "prerender": "ng run sample-angular-universal:prerender"
