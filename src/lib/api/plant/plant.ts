@@ -1,5 +1,5 @@
 export interface JsValuePlant {
   id:    number
-  name:  string,
+  name:  string
   price: number
 }
